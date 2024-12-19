@@ -20,10 +20,3 @@ Welcome to the **Gifts Randomizer App**! The ultimate tool for all your holiday 
 React: The magical framework that powers our app.
 Bootstrap: For a responsive design that ensures your gifts look good no matter the screen size.
 CSS: To make sure everything is cozy and festive with snowflakes and a custom frame.
-
-## **Getting Started Locally**
-
-1. **Clone this repo:**
-
-   ```bash
-   git clone https://github.com/your-username/gifts-randomizer.git

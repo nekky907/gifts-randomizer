@@ -50,18 +50,29 @@ function App() {
 
   // Start randomization
   const startRandomization = () => {
+    if (gifts.length === 0) {
+      alert("No gifts left to randomize!");
+      return;
+    }
+  
     setIsRandomizing(true);
     setFinalGift(null);
-
+  
     const interval = setInterval(() => {
       const randomGift = gifts[Math.floor(Math.random() * gifts.length)];
       setDisplayedGift(randomGift);
     }, 100);
-
+  
     setTimeout(() => {
       clearInterval(interval);
+  
+      // Choose the final gift
       const chosenGift = gifts[Math.floor(Math.random() * gifts.length)];
       setFinalGift(chosenGift);
+  
+      // Remove the chosen gift from the list
+      setGifts((prevGifts) => prevGifts.filter((gift) => gift !== chosenGift));
+  
       setIsRandomizing(false);
     }, 3000);
   };
